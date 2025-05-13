@@ -1,0 +1,33 @@
+# ~/.gitconfig
+
+# Editor - feel free to replace with 'vim' if you're a l33t c0d3r. Else, I would recommend nano.
+[core]
+        editor = nano
+
+# Fancy config options to make your life easier.
+[pull]
+        rebase = true # Automatically rebase your changes on top of remote changes when pulling.
+[fetch]
+        prune = true # Automatically delete branches locally if they are deleted remotely.
+[diff]
+        colorMoved = zebra # Some visual highlighting when using git diff
+[remote "origin"]
+        prune = true # Similar to the prune config for git pull
+[credential]
+        helper = store # Store credentials in a file, in plain text. Turn this off if you don't want me hacking you >:)
+[push]
+        autoSetupRemote = true # Automatically takes care of setup when pushing a new branch        
+[http]
+        postBuffer = 524288000 # Increased size for pushing, avoids stalling in case you're pushing large files.
+
+
+# Aliases are super useful to save you 0.001 seconds of your life each time you add / commit / push / etc.
+[alias]
+        co = checkout
+        c = commit
+        s = status
+        a = add
+        p = push
+        rr = 'rm -r'
+        cp = cherry-pick
+        b = branch
